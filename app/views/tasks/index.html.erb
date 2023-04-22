@@ -1,0 +1,6 @@
+<h1>Task Manager</h1>
+<h2>Task List by Title</h2>
+<% @tasks.each do |task| %>
+    <p><%= link_to task.title, task_path(task) %></p>
+  <% end %>
+<%= link_to "Add Task", new_task_path %>
