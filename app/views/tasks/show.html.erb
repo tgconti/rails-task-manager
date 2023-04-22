@@ -1,9 +1,9 @@
 <h1>Task Title: <%= @task.title %></h1>
 <p>Details: <%= @task.details %> | Completed: <%= @task.completed %> </p>
-
-<%= link_to "Back to List", tasks_path %>
-<%= link_to "Edit Task", edit_task_path %>
+<hr>
+<%= link_to "Back to List", tasks_path, class: 'btn btn-outline-primary' %>
+<%= link_to "Edit Task", edit_task_path, class: 'btn btn-outline-primary' %>
 <%= link_to "Delete",
-  task_path,
+  task_path, class: 'btn btn-outline-primary',
   data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
 %>

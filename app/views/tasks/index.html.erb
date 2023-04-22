@@ -1,6 +1,8 @@
 <h1>Task Manager</h1>
 <h2>Task List by Title</h2>
+<hr>
 <% @tasks.each do |task| %>
-    <p><%= link_to task.title, task_path(task) %></p>
+    <p><%= link_to task.title, task_path(task), class: 'text-decoration-none' %></p>
   <% end %>
-<%= link_to "Add Task", new_task_path %>
+<hr>
+<%= link_to "Add Task", new_task_path, class: 'btn btn-outline-primary' %>
